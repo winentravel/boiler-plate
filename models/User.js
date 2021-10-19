@@ -35,21 +35,3 @@ const userSchema = mongoose.Schema({
 const User = mongoose.model('User', userSchema)
 
 module.exports = { User }
-
-const productSchema = mongoose.Schema({
-  writer: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  },
-  title: {
-    type: String,
-    maxlength: 50
-  },
-  description: {
-    type: String
-  }
-}, { timestamps: true })
-
-const Product = mongoose.model('User', userSchema);
-
-module.exports = { User }
